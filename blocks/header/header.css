@@ -1,6 +1,8 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: rgb(11 18 32 / 92%);
+  border-bottom: 1px solid var(--header-border);
+  backdrop-filter: blur(12px);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -149,7 +151,9 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: auto;
+  max-width: 168px;
+  max-height: 36px;
   height: auto;
 }
 
@@ -269,4 +273,19 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+header nav .nav-tools .button-wrapper {
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  header nav .nav-tools .button {
+    font-size: var(--body-font-size-xs);
+    padding: 0.45em 1em;
+  }
 }

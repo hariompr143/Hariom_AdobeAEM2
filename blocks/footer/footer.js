@@ -1,5 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
+import { createNeurosparkXFooterMain } from '../../scripts/neurosparkx-fallback.js';
 
 /**
  * loads and decorates the footer
@@ -9,7 +10,10 @@ export default async function decorate(block) {
   // load footer as fragment
   const footerMeta = getMetadata('footer');
   const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
-  const fragment = await loadFragment(footerPath);
+  let fragment = await loadFragment(footerPath);
+  if (!fragment) {
+    fragment = createNeurosparkXFooterMain();
+  }
 
   // decorate footer DOM
   block.textContent = '';

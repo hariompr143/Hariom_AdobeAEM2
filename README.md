@@ -1,5 +1,8 @@
-# Your Project's Title...
-Your project's description...
+# NeurosparkX (Adobe AEM Edge Delivery Services)
+
+Enterprise sample site for **NeurosparkX** — header, main, and footer with brand assets under `assets/NeurosparkX/`.
+
+Brand images: logo, hero art, and solution icons in `assets/NeurosparkX/`. Nav and footer use authored `/nav` and `/footer` fragments when available; otherwise built-in NeurosparkX fallbacks in `scripts/neurosparkx-fallback.js`.
 
 ## Environments
 - Preview: https://main--Hariom_AdobeAEM2--hariompr143.aem.page/

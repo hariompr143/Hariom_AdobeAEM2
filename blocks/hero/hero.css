@@ -5,8 +5,24 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: 56px 24px 64px;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgb(11 18 32 / 92%) 0%,
+    rgb(11 18 32 / 55%) 55%,
+    rgb(11 18 32 / 35%) 100%
+  );
+  pointer-events: none;
 }
 
 .hero h1 {
@@ -30,8 +46,24 @@
   height: 100%;
 }
 
+.hero .hero-eyebrow {
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 0.5em;
+}
+
+.hero p:not(.button-wrapper) {
+  max-width: 42rem;
+  color: rgb(232 236 244 / 90%);
+  font-size: var(--body-font-size-m);
+}
+
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding: 72px 32px 80px;
+    min-height: 560px;
   }
 }
